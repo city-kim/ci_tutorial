@@ -45,9 +45,10 @@ export const Primary: Story = {
   },
   args: {
     buttons: [
-      { key: 'day', text: '일간' },
-      { key: 'week', text: '주간' },
-      { key: 'month', text: '월간' },
+      { key: 'button1', text: '버튼1' },
+      { key: 'button2', text: '버튼2' },
+      { key: 'button3', text: '버튼3' },
+      { key: 'button4', text: '버튼4' }
     ],
   },
 }
