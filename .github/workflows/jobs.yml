@@ -1,0 +1,22 @@
+name: job
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # unit test를 실행한다
+  unit_test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 8
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+        cache: 'pnpm'
+    - run: pnpm install
+    - run: pnpm test:unit
