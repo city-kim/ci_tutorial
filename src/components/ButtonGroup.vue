@@ -53,7 +53,7 @@ function updateActive(key: string | undefined) {
   color: blue;
 }
 .button-group button:hover {
-  background-color: rgb(240, 240, 240);
+  background-color: #ccc;
 }
 .button-group button + button {
   border-left: 1px solid #ccc;
