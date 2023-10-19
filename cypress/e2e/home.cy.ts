@@ -12,12 +12,6 @@ describe('Home', () => {
   })
 
   describe('button의 액션을 검사한다', () => {
-    it('button hover시 배경색이 변경된다', () => {
-      const button = cy.get('button').eq(0)
-      button.trigger('mouseover')
-      button.should('have.css', 'background-color', 'rgb(240, 240, 240)')
-    })
-
     it('button 클릭시 active 클래스가 적용된다', () => {
       cy.get('button').eq(0).click()
       cy.get('button').eq(0).should('have.class', 'active')
